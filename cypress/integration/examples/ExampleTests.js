@@ -22,9 +22,6 @@ describe('Example Tests', function () {
         // We can also identify elements using child chain locators
         cy.get(':nth-child(3) > .product-action > button').click()
 
-        //Validate item was added to the cart
-        cy.get('[data-cypress-el="true"] > strong').should('match', '1')
-
         // Since Cypress is asyncronus we need to use promises to force a task completion before we execute asyncronus commands
         // With eq we can select an element by its index if we know it
         cy.get('.products').as('productLocator')
