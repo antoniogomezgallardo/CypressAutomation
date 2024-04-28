@@ -1,14 +1,14 @@
 /// <reference types="Cypress" />
 
-describe('Checkout suite', function(){
+describe('Checkout suite', function () {
 
-    it('E2E Succesfull Checkout of 1kg of Beetroot', function(){
+    it('E2E Succesfull Checkout of 1kg of Beetroot', function () {
         //Go to the desired page
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
-        
+
         // Locate the search bar and write in it
         cy.get('.search-keyword').type('Be')
-        
+
         // From the results of the search select the desired product and add it to the cart
         cy.get('.products').find('.product').each(($el, index, $list) => {
 

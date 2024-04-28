@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
-describe('Web Controls Suite', function(){
+describe('Handling Checkboxes', function () {
 
-    it('Checking/Unchecking a particular Checkbox', function(){
+    it('Checking/Unchecking a particular Checkbox', function () {
 
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         //Checking
@@ -12,11 +12,13 @@ describe('Web Controls Suite', function(){
 
     })
 
-    it('Check multiple checkboxes', function(){
+    it('Check multiple checkboxes', function () {
 
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         cy.get('input[type="checkbox"]').check(['option2', 'option3'])
 
     })
+
+
 
 })
