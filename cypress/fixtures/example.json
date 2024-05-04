@@ -1,5 +1,7 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "angularUrl":"https://rahulshettyacademy.com/angularpractice/",
+  "name":"Rulo",
+  "gender": "Male",
+  "minLength": "2",
+  "productNames": ["iphone X", "Samsung Note 8"]
 }
