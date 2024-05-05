@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-05T05:11:34.378Z",
+    "end": "2024-05-05T05:11:47.299Z",
+    "duration": 12921,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7061f394-a1a9-4acc-a310-07e528b2d6d6",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Fixtures.js",
+      "file": "cypress/integration/examples/Fixtures.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6b5afb5-f9ee-44fa-9178-7163dc1159d0",
+          "title": "Fixtures suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fixtures Basics",
+              "fullTitle": "Fixtures suite Fixtures Basics",
+              "timedOut": null,
+              "duration": 3364,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url') + this.data.angularUrl);\ncy.get('div.form-group input[name=\"name\"]').type(this.data.name);\ncy.get('#exampleFormControlSelect1').select(this.data.gender);",
+              "err": {},
+              "uuid": "3837729a-26b8-4171-b2e6-cafe0e722229",
+              "parentUUID": "d6b5afb5-f9ee-44fa-9178-7163dc1159d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validation using fixtures",
+              "fullTitle": "Fixtures suite Validation using fixtures",
+              "timedOut": null,
+              "duration": 865,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url') + this.data.angularUrl);\n//Validate Two-Way binding input\ncy.get('div.form-group input[name=\"name\"]').type(this.data.name);\ncy.get('h4 input').should('have.value', this.data.name);\n//Validate attribute\ncy.get('div.form-group input[name=\"name\"]').invoke('attr', \"minlength\").should('equal', this.data.minLength);\n//Validate option disabled\ncy.get('#inlineRadio3').should('be.disabled');",
+              "err": {},
+              "uuid": "85abacf4-7840-4785-9a53-c09e7636f7c1",
+              "parentUUID": "d6b5afb5-f9ee-44fa-9178-7163dc1159d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Using Commands validate Adding multiple disered items to cart",
+              "fullTitle": "Fixtures suite Using Commands validate Adding multiple disered items to cart",
+              "timedOut": null,
+              "duration": 3056,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url') + this.data.angularUrl);\ncy.get('[class=\"nav-link\"][href*=\"shop\"]').click();\ncy.selectTwoProducts(this.data.productNames[0], this.data.productNames[1]);\ncy.get('.nav-link.btn.btn-primary').should('contain.text', '2');",
+              "err": {},
+              "uuid": "b3d30da5-4589-4c13-af55-33065fcfff3c",
+              "parentUUID": "d6b5afb5-f9ee-44fa-9178-7163dc1159d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Using Commands validate Adding multiple disered items to cart with iteration",
+              "fullTitle": "Fixtures suite Using Commands validate Adding multiple disered items to cart with iteration",
+              "timedOut": null,
+              "duration": 1325,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url') + this.data.angularUrl);\ncy.get('[class=\"nav-link\"][href*=\"shop\"]').click();\nvar productNames = this.data.productNames;\nproductNames.forEach(function (element) {\n  cy.selectProduct(element);\n});\ncy.get('.nav-link.btn.btn-primary').should('contain.text', '2');",
+              "err": {},
+              "uuid": "09e67313-ebdf-4b85-b89a-a2ccd17a58f3",
+              "parentUUID": "d6b5afb5-f9ee-44fa-9178-7163dc1159d0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3837729a-26b8-4171-b2e6-cafe0e722229",
+            "85abacf4-7840-4785-9a53-c09e7636f7c1",
+            "b3d30da5-4589-4c13-af55-33065fcfff3c",
+            "09e67313-ebdf-4b85-b89a-a2ccd17a58f3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-05T05:10:25.126Z",
+    "end": "2024-05-05T05:10:52.063Z",
+    "duration": 26937,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "db7bda01-9928-477d-8e80-5338b2d92730",
+      "title": "",
+      "fullFile": "cypress/integration/examples/ChildTab.js",
+      "file": "cypress/integration/examples/ChildTab.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c1d181b-96ca-455f-bbde-cbd91f838091",
+          "title": "Child Tab suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling a child tab",
+              "fullTitle": "Child Tab suite Handling a child tab",
+              "timedOut": null,
+              "duration": 22453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#opentab').invoke('removeAttr', 'target').click();\ncy.origin('https://www.qaclickacademy.com', () => {\n  cy.get('#navbarSupportedContent a[href*=\"about\"]').click();\n  cy.get('.section-title h2').should('contain', 'QAClick');\n});",
+              "err": {},
+              "uuid": "ed0af5c8-60de-4362-84c6-ddc6e1436f0a",
+              "parentUUID": "6c1d181b-96ca-455f-bbde-cbd91f838091",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed0af5c8-60de-4362-84c6-ddc6e1436f0a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22453,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -38,3 +38,7 @@
 ## Markdown Sintax
 
 - `https://www.markdownguide.org/basic-syntax/`
+
+## Reports with Mochawsome
+
+- `https://www.npmjs.com/package/cypress-mochawesome-reporter`

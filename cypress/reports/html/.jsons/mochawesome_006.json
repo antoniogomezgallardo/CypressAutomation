@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-05T05:11:17.577Z",
+    "end": "2024-05-05T05:11:30.698Z",
+    "duration": 13121,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2609d3ff-291f-4d82-a730-1d9e69da2679",
+      "title": "",
+      "fullFile": "cypress/integration/examples/ExampleTests.js",
+      "file": "cypress/integration/examples/ExampleTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e0ddfe9-4982-45fb-beff-afa8d94e0b25",
+          "title": "Example Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the number of results in a search",
+              "fullTitle": "Example Tests Validate the number of results in a search",
+              "timedOut": null,
+              "duration": 6371,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('.search-keyword').type('ca');\n// Since there is an invisible element that matches 'product' we need to indicate that the ones we want are the visibles\ncy.get('.product:visible').should('have.length', 4);\n// This is the way Cypress allows to create reusable variables\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').should('have.length', 4);",
+              "err": {},
+              "uuid": "fcb69c07-86f5-4666-a05d-61a465a321e1",
+              "parentUUID": "0e0ddfe9-4982-45fb-beff-afa8d94e0b25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add an element to the cart",
+              "fullTitle": "Example Tests Add an element to the cart",
+              "timedOut": null,
+              "duration": 1719,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('.search-keyword').type('ca');\n// We can also identify elements using child chain locators\ncy.get(':nth-child(3) > .product-action > button').click();\n// Since Cypress is asyncronus we need to use promises to force a task completion before we execute asyncronus commands\n// With eq we can select an element by its index if we know it\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').eq(2).contains('ADD TO CART').click().then(function () {\n  console.log('test Log');\n});\n// if we want to select an element withour knowing the index of the element we need to iterate wit each(($el, index, $list) =>{})\ncy.get('@productLocator').find('.product').each(($el, index, $list) => {\n  const textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    //We need to use cy.wrap() because cypress has 'deprecated' the click() method on elements of a promise\n    cy.wrap($el).find('button').click();\n  }\n});",
+              "err": {},
+              "uuid": "59407390-8a68-468f-b6ad-8d3b21c3f85c",
+              "parentUUID": "0e0ddfe9-4982-45fb-beff-afa8d94e0b25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the Logo name",
+              "fullTitle": "Example Tests Validate the Logo name",
+              "timedOut": null,
+              "duration": 586,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "{\n  cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\n  //assert if logo text is correctly displayed\n  cy.get('.brand').should('have.text', 'GREENKART');\n  //this is to print in logs\n  cy.get('.brand').then(function (logoelement) {\n    cy.log(logoelement.text());\n  });\n}",
+              "err": {},
+              "uuid": "d4580887-4264-46e8-a3b8-c27785311015",
+              "parentUUID": "0e0ddfe9-4982-45fb-beff-afa8d94e0b25",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fcb69c07-86f5-4666-a05d-61a465a321e1",
+            "59407390-8a68-468f-b6ad-8d3b21c3f85c",
+            "d4580887-4264-46e8-a3b8-c27785311015"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8676,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
