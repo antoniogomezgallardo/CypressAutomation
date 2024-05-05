@@ -1,5 +1,6 @@
 {
-  "angularUrl":"https://rahulshettyacademy.com/angularpractice/",
+  "angularUrl":"/angularpractice/",
+  "automationPracticeUrl": "/AutomationPractice",
   "name":"Rulito",
   "gender": "Male",
   "minLength": "2",

@@ -10,14 +10,14 @@ describe('Fixtures suite', function () {
 
     it('Fixtures Basics', function () {
        
-        cy.visit(this.data.angularUrl)
+        cy.visit(Cypress.env('url') + this.data.angularUrl)
         cy.get('div.form-group input[name="name"]').type(this.data.name)
         cy.get('#exampleFormControlSelect1').select(this.data.gender)
     })
 
     it('Validation using fixtures', function(){
 
-        cy.visit(this.data.angularUrl)
+        cy.visit(Cypress.env('url') + this.data.angularUrl)
 
         //Validate Two-Way binding input
         cy.get('div.form-group input[name="name"]').type(this.data.name)
@@ -34,7 +34,7 @@ describe('Fixtures suite', function () {
 
     it('Using Commands validate Adding multiple disered items to cart', function() {
 
-        cy.visit(this.data.angularUrl)
+        cy.visit(Cypress.env('url') + this.data.angularUrl)
         cy.get('[class="nav-link"][href*="shop"]').click()
         cy.selectTwoProducts(this.data.productNames[0], this.data.productNames[1])
 
@@ -44,7 +44,7 @@ describe('Fixtures suite', function () {
 
     it('Using Commands validate Adding multiple disered items to cart with iteration', function() {
 
-        cy.visit(this.data.angularUrl)
+        cy.visit(Cypress.env('url') + this.data.angularUrl)
         cy.get('[class="nav-link"][href*="shop"]').click()
 
         var productNames = this.data.productNames

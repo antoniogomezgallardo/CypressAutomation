@@ -20,7 +20,7 @@ describe('Using Page Objects', function(){
 
     it('Fill some values and validations', function(){
 
-        cy.visit(this.data.angularUrl)
+        cy.visit(Cypress.env('url') + this.data.angularUrl)
 
         homePage.getName().type(this.data.name)
         homePage.getGender().select(this.data.gender)
@@ -33,7 +33,7 @@ describe('Using Page Objects', function(){
 
     it('Select Products and Checkout', function(){
 
-        cy.visit(this.data.angularUrl)
+        cy.visit(Cypress.env('url') + this.data.angularUrl)
         
         homePage.goToShop().click()
         //select desired products
@@ -65,15 +65,12 @@ describe('Using Page Objects', function(){
             })
 
         })
-        cy.pause()
-        //cartPage.getFirstItemPrice().then(($price)=>{console.log($price.text()) })
-        //cartPage.getSecondItemPrice().then(($price)=>{console.log($price.text()) })
 
         //go to Checkout
         cartPage.getCheckoutButton().click()
         checkoutPage.getCountryInput().type('Spain')
         checkoutPage.getSelectedCountry().click()
-        checkoutPage.getAcceptConditions().click()
+        checkoutPage.getAcceptConditions().click({force:true})
 
         //Validate Purchase
         checkoutPage.getPurchaseButton().click()
