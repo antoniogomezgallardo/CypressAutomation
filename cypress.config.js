@@ -7,6 +7,7 @@ module.exports = defineConfig({
     url: 'https://rahulshettyacademy.com'
   },
   reporter: 'cypress-mochawesome-reporter',
+  video: true,
 
   e2e: {
     setupNodeEvents(on, config) {
