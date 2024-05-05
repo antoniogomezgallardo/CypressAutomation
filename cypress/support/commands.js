@@ -34,6 +34,13 @@ Cypress.Commands.add('selectProduct', (product) => {
     })
  })
 
+  Cypress.Commands.add('checkTotalSum', (priceA, priceB) => { 
+
+    var resutl = 0
+
+   })
+
+
 //
 //
 // -- This is a child command --
