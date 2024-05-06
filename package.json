@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "dashboardTest": "npx cypress run --record --key 2b564182-5010-4e0d-b9b5-7ce865a52fde",
+    "smokeTest": "npx cypress run --spec \"cypress/integration/examples/POM.js\" " 
   },
   "author": "",
   "license": "ISC",
