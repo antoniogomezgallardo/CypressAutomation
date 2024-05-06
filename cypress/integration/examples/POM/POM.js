@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
-import HomePage from '../pageObjects/HomePage'
-import ProductPage from '../pageObjects/ProductPage'
-import CartPage from '../pageObjects/CartPage'
-import CheckoutPage from '../pageObjects/CheckoutPage'
+import HomePage from '../../pageObjects/HomePage'
+import ProductPage from '../../pageObjects/ProductPage'
+import CartPage from '../../pageObjects/CartPage'
+import CheckoutPage from '../../pageObjects/CheckoutPage'
 
 describe('Using Page Objects', function(){
 
