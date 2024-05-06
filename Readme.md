@@ -1,3 +1,8 @@
+## Cypress Cloud Dashboard
+
+- **cypress.io/cloud**
+- npx cypress run --record --key 2b564182-5010-4e0d-b9b5-7ce865a52fde
+
 ## Commands
 
 - **Open Test Runner**
