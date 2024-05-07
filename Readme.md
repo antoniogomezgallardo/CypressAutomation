@@ -1,3 +1,27 @@
+## Initialize a Cypress project
+
+-  **Create a new folder and access it**
+    mkdir <FOLDER NAME>
+    cd <FOLDER NAME>
+
+- **Initialize npm and create a package.json file**
+    npm -i init
+
+- **Install Cypress and update package.json file**
+    npm install cypress --save-dev
+
+- **Add Configuration files for e2e tests**
+    node_modules/.bin/cypress open
+
+- **Create a folder called 'integration/examples' inside the 'cypress' folder to alocate the test files (specs)**
+    cd cypress
+    mkdir integration
+    mkdir examples
+
+- **Tell cypress where your specs will be located**
+    in the cypress.config.js file uright after the the e2e function write:
+        specPattern: 'cypress/integration/examples/*.js'
+
 ## Cypress Cloud Dashboard
 
 - **cypress.io/cloud**
