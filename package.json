@@ -6,7 +6,7 @@
     "test": "npx cypress run",
     "dashboardTest": "npx cypress run --record --key 2b564182-5010-4e0d-b9b5-7ce865a52fde",
     "POM_test": "npx cypress run --spec \"cypress/integration/examples/POM/POM.js\"" ,
-    "Basic_tests": "npx cypress run --spec \"cypress/integration/examples/Basic_tests/*.js\""
+    "Basic_tests": "npx cypress run --spec \"cypress/integration/examples/Basics/*.js\""
   },
   "author": "",
   "license": "ISC",
