@@ -59,6 +59,9 @@
     or
     npx cypress run --broswer BROWSER_NAME (chrome, firefox,...)
 
+- **Run Tests from scripts**
+    npm run <SCRIPT_NAME>
+
 
 ## CSS selectors
 
@@ -71,3 +74,6 @@
 ## Reports with Mochawsome
 
 - `https://www.npmjs.com/package/cypress-mochawesome-reporter`
+
+## Cypress Cucumber Preprocessor
+- `https://github.com/badeball/cypress-cucumber-preprocessor`
