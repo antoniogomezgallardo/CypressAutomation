@@ -89,10 +89,24 @@ describe('Incercept Http Calls', function(){
 
     it('Add a new book', function(){
 
+        function makeid(length) {
+            let result = '';
+            const characters = '0123456789';
+            const charactersLength = characters.length;
+            let counter = 0;
+            while (counter < length) {
+              result += characters.charAt(Math.floor(Math.random() * charactersLength));
+              counter += 1;
+            }
+            return result;
+        }
+
+        let aisleGenerator = makeid(5)
+
         const reqBody = {
             "name":"El Maravilloso mundo de Rulo",
             "isbn":"zaa1zz",
-            "aisle":"54300",
+            "aisle":aisleGenerator,
             "author":"shetty"
             }
 
